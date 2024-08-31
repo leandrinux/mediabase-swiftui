@@ -8,17 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		8377B37F2C81014800B733BA /* mediabaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377B37E2C81014800B733BA /* mediabaseApp.swift */; };
-		8377B3812C81014800B733BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377B3802C81014800B733BA /* ContentView.swift */; };
+		8377B3812C81014800B733BA /* MediaGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377B3802C81014800B733BA /* MediaGrid.swift */; };
 		8377B3832C81014900B733BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8377B3822C81014900B733BA /* Assets.xcassets */; };
 		8377B3862C81014900B733BA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8377B3852C81014900B733BA /* Preview Assets.xcassets */; };
+		8377B38E2C8102B000B733BA /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 8377B38D2C8102B000B733BA /* QGrid */; };
+		8377B3922C8104F000B733BA /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377B3912C8104F000B733BA /* Media.swift */; };
+		8377B3972C81057900B733BA /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377B3962C81057900B733BA /* UIImage.swift */; };
+		8377B39C2C810AED00B733BA /* MediaNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377B39B2C810AED00B733BA /* MediaNavigation.swift */; };
+		8377B39E2C810B9500B733BA /* MediaDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377B39D2C810B9500B733BA /* MediaDetail.swift */; };
+		8377B3A12C810E3E00B733BA /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377B3A02C810E3E00B733BA /* Networking.swift */; };
+		8377B3A52C82658E00B733BA /* MediaGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377B3A42C82658E00B733BA /* MediaGridCell.swift */; };
+		8377B3A72C826CD000B733BA /* EmptyMediaGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377B3A62C826CD000B733BA /* EmptyMediaGrid.swift */; };
+		8377B3AB2C8271CA00B733BA /* TestStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377B3AA2C8271CA00B733BA /* TestStorage.swift */; };
+		8377B3AD2C827D6100B733BA /* MediaRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377B3AC2C827D6100B733BA /* MediaRoot.swift */; };
+		8377B3AF2C827F6500B733BA /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377B3AE2C827F6500B733BA /* Tag.swift */; };
+		8377B3B12C827FD100B733BA /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377B3B02C827FD100B733BA /* TagList.swift */; };
+		8377B3B32C8281DE00B733BA /* EmptyTagsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377B3B22C8281DE00B733BA /* EmptyTagsList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8377B37B2C81014800B733BA /* mediabase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mediabase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8377B37E2C81014800B733BA /* mediabaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mediabaseApp.swift; sourceTree = "<group>"; };
-		8377B3802C81014800B733BA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8377B3802C81014800B733BA /* MediaGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaGrid.swift; sourceTree = "<group>"; };
 		8377B3822C81014900B733BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8377B3852C81014900B733BA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8377B3912C8104F000B733BA /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		8377B3962C81057900B733BA /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		8377B39B2C810AED00B733BA /* MediaNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaNavigation.swift; sourceTree = "<group>"; };
+		8377B39D2C810B9500B733BA /* MediaDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetail.swift; sourceTree = "<group>"; };
+		8377B3A02C810E3E00B733BA /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		8377B3A42C82658E00B733BA /* MediaGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaGridCell.swift; sourceTree = "<group>"; };
+		8377B3A62C826CD000B733BA /* EmptyMediaGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyMediaGrid.swift; sourceTree = "<group>"; };
+		8377B3AA2C8271CA00B733BA /* TestStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStorage.swift; sourceTree = "<group>"; };
+		8377B3AC2C827D6100B733BA /* MediaRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaRoot.swift; sourceTree = "<group>"; };
+		8377B3AE2C827F6500B733BA /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		8377B3B02C827FD100B733BA /* TagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
+		8377B3B22C8281DE00B733BA /* EmptyTagsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTagsList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8377B38E2C8102B000B733BA /* QGrid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +77,13 @@
 		8377B37D2C81014800B733BA /* mediabase */ = {
 			isa = PBXGroup;
 			children = (
+				8377B39A2C810A1A00B733BA /* Models */,
+				8377B39F2C810D5600B733BA /* Data */,
+				8377B3952C81056C00B733BA /* Extensions */,
+				8377B3B42C8282A800B733BA /* Media */,
+				8377B3B52C8282BB00B733BA /* Tags */,
+				8377B3AC2C827D6100B733BA /* MediaRoot.swift */,
 				8377B37E2C81014800B733BA /* mediabaseApp.swift */,
-				8377B3802C81014800B733BA /* ContentView.swift */,
 				8377B3822C81014900B733BA /* Assets.xcassets */,
 				8377B3842C81014900B733BA /* Preview Content */,
 			);
@@ -65,6 +96,53 @@
 				8377B3852C81014900B733BA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8377B3952C81056C00B733BA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8377B3962C81057900B733BA /* UIImage.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8377B39A2C810A1A00B733BA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8377B3912C8104F000B733BA /* Media.swift */,
+				8377B3AE2C827F6500B733BA /* Tag.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8377B39F2C810D5600B733BA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8377B3A02C810E3E00B733BA /* Networking.swift */,
+				8377B3AA2C8271CA00B733BA /* TestStorage.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8377B3B42C8282A800B733BA /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				8377B39B2C810AED00B733BA /* MediaNavigation.swift */,
+				8377B3802C81014800B733BA /* MediaGrid.swift */,
+				8377B3A42C82658E00B733BA /* MediaGridCell.swift */,
+				8377B3A62C826CD000B733BA /* EmptyMediaGrid.swift */,
+				8377B39D2C810B9500B733BA /* MediaDetail.swift */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		8377B3B52C8282BB00B733BA /* Tags */ = {
+			isa = PBXGroup;
+			children = (
+				8377B3B02C827FD100B733BA /* TagList.swift */,
+				8377B3B22C8281DE00B733BA /* EmptyTagsList.swift */,
+			);
+			path = Tags;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +161,9 @@
 			dependencies = (
 			);
 			name = mediabase;
+			packageProductDependencies = (
+				8377B38D2C8102B000B733BA /* QGrid */,
+			);
 			productName = mediabase;
 			productReference = 8377B37B2C81014800B733BA /* mediabase.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +192,9 @@
 				Base,
 			);
 			mainGroup = 8377B3722C81014800B733BA;
+			packageReferences = (
+				8377B38C2C8102B000B733BA /* XCRemoteSwiftPackageReference "QGrid" */,
+			);
 			productRefGroup = 8377B37C2C81014800B733BA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +221,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8377B3812C81014800B733BA /* ContentView.swift in Sources */,
+				8377B3AF2C827F6500B733BA /* Tag.swift in Sources */,
+				8377B3B12C827FD100B733BA /* TagList.swift in Sources */,
+				8377B3812C81014800B733BA /* MediaGrid.swift in Sources */,
+				8377B3AB2C8271CA00B733BA /* TestStorage.swift in Sources */,
+				8377B3B32C8281DE00B733BA /* EmptyTagsList.swift in Sources */,
+				8377B3AD2C827D6100B733BA /* MediaRoot.swift in Sources */,
+				8377B3A72C826CD000B733BA /* EmptyMediaGrid.swift in Sources */,
+				8377B3972C81057900B733BA /* UIImage.swift in Sources */,
+				8377B39C2C810AED00B733BA /* MediaNavigation.swift in Sources */,
+				8377B3A12C810E3E00B733BA /* Networking.swift in Sources */,
+				8377B3A52C82658E00B733BA /* MediaGridCell.swift in Sources */,
+				8377B39E2C810B9500B733BA /* MediaDetail.swift in Sources */,
 				8377B37F2C81014800B733BA /* mediabaseApp.swift in Sources */,
+				8377B3922C8104F000B733BA /* Media.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +440,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8377B38C2C8102B000B733BA /* XCRemoteSwiftPackageReference "QGrid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Q-Mobile/QGrid";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8377B38D2C8102B000B733BA /* QGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8377B38C2C8102B000B733BA /* XCRemoteSwiftPackageReference "QGrid" */;
+			productName = QGrid;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8377B3732C81014800B733BA /* Project object */;
 }
