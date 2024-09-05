@@ -17,7 +17,7 @@ struct MediaNavigation: View {
                     ToolbarItem(placement: .principal) {
                         Text("Mediabase")
                             .font(.primary(size: .title))
-                            .foregroundStyle(Color.gray)
+                            .foregroundStyle(Color.purple)
                     }
                     ToolbarItem(placement:  .topBarTrailing) {
                         Button {

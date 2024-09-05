@@ -13,13 +13,18 @@ struct TagNavigation: View {
     var body: some View {
         NavigationStack {
             TagList(tags: tags)
-                .navigationTitle("Mediabase")
-                .toolbarTitleDisplayMode(.inline)
                 .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        Text("Mediabase")
+                            .font(.primary(size: .title))
+                            .foregroundStyle(Color.purple)
+                    }
                     ToolbarItem(placement:  .topBarTrailing) {
                         Button {
                         } label: {
                             Text("Search")
+                                .font(.secondary(size: .normal))
+                                .foregroundStyle(Color.gray)
                         }
                     }
                 }

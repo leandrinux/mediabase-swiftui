@@ -17,9 +17,11 @@ struct TagList: View {
                 ForEach(tags) { tag in
                     HStack {
                         Text(tag.name)
+                            .font(.secondary(size: .normal))
                             .padding(.leading, 3.0)
                         Spacer()
                         Text("\(tag.count)")
+                            .font(.secondary(size: .normal))
                     }
                     .frame(height: 40.0)
                     
