@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MediaRoot: View {
     var media: [Media]?
+    var tags: [Tag]?
     
     var body: some View {
         TabView {
@@ -16,7 +17,7 @@ struct MediaRoot: View {
                 .tabItem {
                     Label("Media", systemImage: "star")
                 }
-            TagList()
+            TagList(tags: tags)
                 .tabItem {
                     Label("Tags", systemImage: "star")
                 }
@@ -25,7 +26,7 @@ struct MediaRoot: View {
 }
 
 #Preview {
-    MediaRoot(media: TestStorage.mediaList)
+    MediaRoot(media: TestStorage.mediaList, tags: TestStorage.tagList)
 }
 
 #Preview {

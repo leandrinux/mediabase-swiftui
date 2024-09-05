@@ -15,9 +15,18 @@ struct TagList: View {
         if let tags = self.tags {
             List {
                 ForEach(tags) { tag in
-                    Text(tag.name)
+                    HStack {
+                        Text(tag.name)
+                            .padding(.leading, 3.0)
+                        Spacer()
+                        Text("\(tag.count)")
+                    }
+                    .frame(height: 40.0)
+                    
                 }
             }
+            
+            
         } else {
             EmptyTagsList()
         }

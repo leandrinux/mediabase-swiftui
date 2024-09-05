@@ -17,6 +17,7 @@ struct EmptyTagsList: View {
                 .frame(width: 100, height: 100)
                 .padding()
             Text("You do not currently have any tagged media")
+                .font(.secondary(size: .normal))
                 .multilineTextAlignment(.center)
                 .foregroundStyle(Color("MBGray"))
         }.padding()

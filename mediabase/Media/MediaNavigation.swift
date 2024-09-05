@@ -13,14 +13,19 @@ struct MediaNavigation: View {
     var body: some View {
         NavigationStack {
             MediaGrid(media: media)
-                .navigationTitle("Mediabase")
-                .toolbarTitleDisplayMode(.inline)
                 .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        Text("Mediabase")
+                            .font(.primary(size: .title))
+                            .foregroundStyle(Color.gray)
+                    }
                     ToolbarItem(placement:  .topBarTrailing) {
                         Button {
                             
                         } label: {
                             Text("Add")
+                                .font(.secondary(size: .normal))
+                                .foregroundStyle(Color.gray)
                         }
                     }
                 }

@@ -17,6 +17,7 @@ struct EmptyMediaGrid: View {
                 .frame(width: 100, height: 100)
                 .padding()
             Text("Once you upload your photos and videos they will appear here")
+                .font(.secondary(size: .normal))
                 .multilineTextAlignment(.center)
                 .foregroundStyle(Color("MBGray"))
         }.padding()

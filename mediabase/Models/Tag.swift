@@ -10,5 +10,5 @@ import Foundation
 struct Tag: Identifiable {
     let id: String
     let name: String
-    let count: Int = 0
+    let count: Int
 }
