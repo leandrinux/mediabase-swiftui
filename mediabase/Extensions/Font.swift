@@ -14,11 +14,11 @@ extension Font {
         case normal = 20
     }
     
-    static func primary(size: FontSize) -> Font {
+    static func primary(_ size: FontSize) -> Font {
         return .custom("NIKEARegular", size: size.rawValue)
     }
 
-    static func secondary(size: FontSize) -> Font {
+    static func secondary(_ size: FontSize) -> Font {
         return .custom("CoolveticaRg-Regular", size: size.rawValue)
     }
 

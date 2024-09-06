@@ -17,7 +17,7 @@ struct MediaRoot: View {
                 .tabItem {
                     Label("Media", systemImage: "star")
                 }
-            TagList(tags: tags)
+            TagNavigation(tags: tags)
                 .tabItem {
                     Label("Tags", systemImage: "star")
                 }

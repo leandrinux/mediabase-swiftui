@@ -13,13 +13,13 @@ struct EmptyTagsList: View {
             Image("tags")
                 .renderingMode(.template)
                 .resizable()
-                .foregroundStyle(Color("MBGray"))
+                .foregroundStyle(Color.app(.emptyViewText))
                 .frame(width: 100, height: 100)
                 .padding()
             Text("You do not currently have any tagged media")
-                .font(.secondary(size: .normal))
+                .font(.secondary(.normal))
                 .multilineTextAlignment(.center)
-                .foregroundStyle(Color("MBGray"))
+                .foregroundStyle(Color.app(.emptyViewText))
         }.padding()
     }
 }

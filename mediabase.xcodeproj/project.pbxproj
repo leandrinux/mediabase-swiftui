@@ -28,6 +28,7 @@
 		838C81072C8A698E00F1C1F9 /* NIKEA.otf in Resources */ = {isa = PBXBuildFile; fileRef = 838C81052C8A685300F1C1F9 /* NIKEA.otf */; };
 		838C81092C8A69CE00F1C1F9 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838C81082C8A69CE00F1C1F9 /* Font.swift */; };
 		838C810C2C8A756600F1C1F9 /* coolvetica rg.otf in Resources */ = {isa = PBXBuildFile; fileRef = 838C810B2C8A756600F1C1F9 /* coolvetica rg.otf */; };
+		838C810E2C8A7E9A00F1C1F9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838C810D2C8A7E9A00F1C1F9 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		838C81082C8A69CE00F1C1F9 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		838C810A2C8A70D000F1C1F9 /* CREDITS.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CREDITS.md; sourceTree = "<group>"; };
 		838C810B2C8A756600F1C1F9 /* coolvetica rg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "coolvetica rg.otf"; sourceTree = "<group>"; };
+		838C810D2C8A7E9A00F1C1F9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			children = (
 				8377B3962C81057900B733BA /* UIImage.swift */,
 				838C81082C8A69CE00F1C1F9 /* Font.swift */,
+				838C810D2C8A7E9A00F1C1F9 /* Color.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				8377B3B12C827FD100B733BA /* TagList.swift in Sources */,
 				8377B3812C81014800B733BA /* MediaGrid.swift in Sources */,
 				83025D842C83CD78001065DC /* TagNavigation.swift in Sources */,
+				838C810E2C8A7E9A00F1C1F9 /* Color.swift in Sources */,
 				8377B3AB2C8271CA00B733BA /* TestStorage.swift in Sources */,
 				8377B3B32C8281DE00B733BA /* EmptyTagsList.swift in Sources */,
 				8377B3AD2C827D6100B733BA /* MediaRoot.swift in Sources */,

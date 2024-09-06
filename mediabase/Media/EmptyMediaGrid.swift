@@ -13,14 +13,16 @@ struct EmptyMediaGrid: View {
             Image("gallery")
                 .renderingMode(.template)
                 .resizable()
-                .foregroundStyle(Color("MBGray"))
+                .foregroundStyle(Color.app(.emptyViewText))
                 .frame(width: 100, height: 100)
                 .padding()
             Text("Once you upload your photos and videos they will appear here")
-                .font(.secondary(size: .normal))
+                .font(.secondary(.normal))
                 .multilineTextAlignment(.center)
-                .foregroundStyle(Color("MBGray"))
-        }.padding()
+                .foregroundStyle(Color("EmptyViewText"))
+        }
+        .padding()
+            
     }
 }
 
