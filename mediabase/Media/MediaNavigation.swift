@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct MediaNavigation: View {
-    var media: [Media]?
+    
+    var media = [Media]()
 
     var body: some View {
         NavigationStack {
@@ -36,10 +37,18 @@ struct MediaNavigation: View {
 }
 
 #Preview("With photos") {
-    MediaNavigation(media: TestStorage.mediaList)
+    struct AsyncTestView: View {
+        @State var media = [Media]()
+            var body: some View {
+                MediaNavigation(media: media)
+                    .task {
+                        media = await MockStorage.shared.getMedia()
+                    }
+            }
+        }
+    return AsyncTestView()
 }
 
 #Preview("No photos") {
     MediaNavigation()
 }
-

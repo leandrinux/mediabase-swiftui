@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TagList: View {
+    
     var tags: [Tag]?
     
     var body: some View {
@@ -41,7 +42,16 @@ struct TagList: View {
 }
 
 #Preview("With Tags") {
-    TagList(tags: TestStorage.tagList)
+    struct AsyncTestView: View {
+        @State var passedValue = [Tag]()
+        var body: some View {
+            TagList(tags: passedValue)
+                .task {
+                    passedValue = await MockStorage.shared.getTags()
+                }
+        }
+    }
+    return AsyncTestView()
 }
 
 #Preview("Empty") {

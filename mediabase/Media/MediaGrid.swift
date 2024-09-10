@@ -50,5 +50,14 @@ struct MediaGrid: View {
 }
 
 #Preview("With photos") {
-    return MediaGrid(media: TestStorage.mediaList)
+    struct AsyncTestView: View {
+        @State var media = [Media]()
+            var body: some View {
+                MediaGrid(media: media)
+                    .task {
+                        media = await MockStorage.shared.getMedia()
+                    }
+            }
+        }
+    return AsyncTestView()
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TagNavigation: View {
+    
     var tags: [Tag]?
 
     var body: some View {
@@ -34,5 +35,15 @@ struct TagNavigation: View {
 }
 
 #Preview {
-    TagNavigation(tags: TestStorage.tagList)
+    struct AsyncTestView: View {
+        @State var tags = [Tag]()
+        var body: some View {
+            TagNavigation(tags: tags)
+                .task {
+                    tags = await MockStorage.shared.getTags()
+                }
+        }
+    }
+    return AsyncTestView()
 }
+
