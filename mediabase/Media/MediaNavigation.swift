@@ -25,8 +25,10 @@ struct MediaNavigation: View {
                         Button {
                             
                         } label: {
-                            Text("Add")
-                                .font(.secondary(.normal))
+                            Image("add")
+                                .resizable()
+                                .renderingMode(.template)
+                                .frame(width: 38)
                                 .foregroundStyle(Color.app(.main))
                         }
                     }

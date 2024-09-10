@@ -24,8 +24,10 @@ struct TagNavigation: View {
                     ToolbarItem(placement:  .topBarTrailing) {
                         Button {
                         } label: {
-                            Text("Search")
-                                .font(.secondary(.normal))
+                            Image("search")
+                                .resizable()
+                                .renderingMode(.template)
+                                .frame(width: 38)
                                 .foregroundStyle(Color.app(.main))
                         }
                     }

@@ -11,7 +11,7 @@ extension Font {
     
     enum FontSize: CGFloat {
         case title = 22
-        case normal = 20
+        case normal = 19
     }
     
     static func primary(_ size: FontSize) -> Font {
@@ -19,7 +19,7 @@ extension Font {
     }
 
     static func secondary(_ size: FontSize) -> Font {
-        return .custom("CoolveticaRg-Regular", size: size.rawValue)
+        return .custom("Futura-Medium", size: size.rawValue)
     }
 
 }
