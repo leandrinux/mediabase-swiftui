@@ -26,16 +26,16 @@ class MockStorage: DataStorage {
     
     func getTags() async -> [Tag] {
         return [
-            Tag(id: UUID().uuidString, name: "2020", count: 10),
-            Tag(id: UUID().uuidString, name: "2021", count: 15),
-            Tag(id: UUID().uuidString, name: "2022", count: 12),
-            Tag(id: UUID().uuidString, name: "2023", count: 11),
-            Tag(id: UUID().uuidString, name: "2024", count: 7),
-            Tag(id: UUID().uuidString, name: "August", count: 2),
-            Tag(id: UUID().uuidString, name: "September", count: 3),
-            Tag(id: UUID().uuidString, name: "Person", count: 1),
-            Tag(id: UUID().uuidString, name: "Cat", count: 20),
-            Tag(id: UUID().uuidString, name: "Birthday", count: 5),
+            Tag(id: 0, name: "2020", count: 10),
+            Tag(id: 1, name: "2021", count: 15),
+            Tag(id: 2, name: "2022", count: 12),
+            Tag(id: 3, name: "2023", count: 11),
+            Tag(id: 4, name: "2024", count: 7),
+            Tag(id: 5, name: "August", count: 2),
+            Tag(id: 6, name: "September", count: 3),
+            Tag(id: 7, name: "Person", count: 1),
+            Tag(id: 8, name: "Cat", count: 20),
+            Tag(id: 9, name: "Birthday", count: 5),
         ]
     }
     

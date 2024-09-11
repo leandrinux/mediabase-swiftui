@@ -12,11 +12,11 @@ class Storage: DataStorage {
     static let shared = Storage()
 
     func getMedia() async -> [Media] {
-        return []
+        return await Networking.shared.getAllMedia() ?? [Media]()
     }
     
     func getTags() async -> [Tag] {
-        return []
+        return await Networking.shared.getAllTags() ?? [Tag]()
     }
     
 }

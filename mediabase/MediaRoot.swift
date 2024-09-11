@@ -13,27 +13,14 @@ struct MediaRoot: View {
     
     var body: some View {
         TabView {
-            MediaNavigation(media: media ?? [Media]() )
+            MediaNavigation()
                 .tabItem {
                     Label("Media", systemImage: "star")
                 }
-            TagNavigation(tags: tags ?? [Tag]() )
+            TagNavigation()
                 .tabItem {
                     Label("Tags", systemImage: "star")
                 }
         }
     }
 }
-
-/*
-#Preview {
-    MediaRoot(
-        media: MockStorage.shared.getMedia(),
-        tags: MockStorage.shared.getTags()
-    )
-}
-
-#Preview {
-    MediaRoot()
-}
-*/

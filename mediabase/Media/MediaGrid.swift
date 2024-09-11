@@ -10,43 +10,32 @@ import QGrid
 
 struct MediaGrid: View {
     
-    var media: [Media]?
+    @State var media = [Media]()
     
     var body: some View {
-        if let media = media {
-            ZStack(alignment: .top) {
-                QGrid(
-                    media,
-                    columns: 3,
-                    vSpacing: 1,
-                    hSpacing: 1,
-                    vPadding: 1,
-                    hPadding: 1
-                ) {
-                    MediaGridCell(media: $0)
+        ZStack {
+            if media.count > 0 {
+                ZStack(alignment: .top) {
+                    QGrid(
+                        media,
+                        columns: 3,
+                        vSpacing: 1,
+                        hSpacing: 1,
+                        vPadding: 1,
+                        hPadding: 1
+                    ) {
+                        MediaGridCell(media: $0)
+                    }
+                    .background(Color.black)
                 }
-                .background(Color.black)
-                VStack {
-                    Rectangle()
-                        .fill(LinearGradient(colors: [.black, .clear], startPoint: .top, endPoint: .bottom))
-                        .frame(height: 100)
-                    Spacer()
-                    Rectangle()
-                        .fill(LinearGradient(colors: [.clear, .black], startPoint: .top, endPoint: .bottom))
-                        .frame(height: 100)
-                }
-                .edgesIgnoringSafeArea(.all)
-                .opacity(0.8)
-
+            } else {
+                EmptyMediaGrid()
             }
-        } else {
-            EmptyMediaGrid()
+            Gradients()
+        }.task {
+            media = await Storage.shared.getMedia()
         }
     }
-}
-
-#Preview("Empty") {
-    MediaGrid()
 }
 
 #Preview("With photos") {
@@ -60,4 +49,8 @@ struct MediaGrid: View {
             }
         }
     return AsyncTestView()
+}
+
+#Preview("Empty") {
+    MediaGrid()
 }

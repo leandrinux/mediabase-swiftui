@@ -9,32 +9,35 @@ import SwiftUI
 
 struct TagList: View {
     
-    var tags: [Tag]?
+    @State var tags = [Tag]()
     
     var body: some View {
-        
-        if let tags = self.tags {
-            List {
-                ForEach(tags) { tag in
-                    HStack {
-                        Text(tag.name)
-                            .foregroundStyle(Color.app(.listItemForeground))
-                            .font(.secondary(.normal))
-                            .padding(.leading, 3.0)
-                        Spacer()
-                        Text("\(tag.count)")
-                            .foregroundStyle(Color.app(.listItemForeground))
-                            .font(.secondary(.normal))
+        ZStack {
+            if tags.count > 0 {
+                List {
+                    ForEach(tags) { tag in
+                        HStack {
+                            Text(tag.name)
+                                .foregroundStyle(Color.app(.listItemForeground))
+                                .font(.secondary(.normal))
+                                .padding(.leading, 3.0)
+                            Spacer()
+                            Text("\(tag.count)")
+                                .foregroundStyle(Color.app(.listItemForeground))
+                                .font(.secondary(.normal))
+                        }
+                        .frame(height: 40.0)
+                        .listRowSeparatorTint(Color.app(.listItemForeground))
+                        .listRowBackground(Color.app(.listItemBackground))
                     }
-                    .frame(height: 40.0)
-                    .listRowSeparatorTint(Color.app(.listItemForeground))
-                    .listRowBackground(Color.app(.listItemBackground))
                 }
+                .scrollContentBackground(.hidden)
+                .background(Color.app(.listBackground))
+            } else {
+                EmptyTagsList()
             }
-            .scrollContentBackground(.hidden)
-            .background(Color.app(.listBackground))
-        } else {
-            EmptyTagsList()
+        }.task {
+            self.tags = await Storage.shared.getTags()
         }
         
     }

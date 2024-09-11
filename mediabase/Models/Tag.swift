@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Tag: Identifiable {
-    let id: String
+struct Tag: Hashable, Codable, Identifiable {
+    let id: Int
     let name: String
     let count: Int
 }

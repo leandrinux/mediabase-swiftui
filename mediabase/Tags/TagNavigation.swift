@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct TagNavigation: View {
-    
-    var tags: [Tag]?
 
     var body: some View {
         NavigationStack {
-            TagList(tags: tags)
+            TagList()
                 .toolbarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .principal) {
                         Text("Mediabase")
+                            .padding(.top, 10)
                             .font(.primary(.title))
                             .foregroundStyle(Color.app(.main))
                     }
@@ -27,7 +26,7 @@ struct TagNavigation: View {
                             Image("search")
                                 .resizable()
                                 .renderingMode(.template)
-                                .frame(width: 38)
+                                .frame(width: 24, height: 24)
                                 .foregroundStyle(Color.app(.main))
                         }
                     }
@@ -40,7 +39,7 @@ struct TagNavigation: View {
     struct AsyncTestView: View {
         @State var tags = [Tag]()
         var body: some View {
-            TagNavigation(tags: tags)
+            TagNavigation()
                 .task {
                     tags = await MockStorage.shared.getTags()
                 }

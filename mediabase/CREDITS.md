@@ -10,4 +10,4 @@
 * Play icon by Bingge Liu (https://thenounproject.com/creator/binggeliu/)
 * Tags icon by Pixel Perfect (https://www.flaticon.com/authors/pixel-perfect)
 * Search icon by Smashicons (https://www.flaticon.com/authors/smashicons)
-* Add icon by srip (https://www.flaticon.com/authors/srip)
+* Plus icon by Fuzzee https://www.flaticon.com/authors/fuzzee

@@ -9,15 +9,14 @@ import SwiftUI
 
 struct MediaNavigation: View {
     
-    var media = [Media]()
-
     var body: some View {
         NavigationStack {
-            MediaGrid(media: media)
+            MediaGrid()
                 .toolbarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .principal) {
                         Text("Mediabase")
+                            .padding(.top, 10)
                             .font(.primary(.title))
                             .foregroundStyle(Color.app(.main))
                     }
@@ -25,10 +24,10 @@ struct MediaNavigation: View {
                         Button {
                             
                         } label: {
-                            Image("add")
+                            Image("plus")
                                 .resizable()
                                 .renderingMode(.template)
-                                .frame(width: 38)
+                                .frame(width: 24, height: 24)
                                 .foregroundStyle(Color.app(.main))
                         }
                     }
@@ -36,19 +35,6 @@ struct MediaNavigation: View {
         }
     }
     
-}
-
-#Preview("With photos") {
-    struct AsyncTestView: View {
-        @State var media = [Media]()
-            var body: some View {
-                MediaNavigation(media: media)
-                    .task {
-                        media = await MockStorage.shared.getMedia()
-                    }
-            }
-        }
-    return AsyncTestView()
 }
 
 #Preview("No photos") {

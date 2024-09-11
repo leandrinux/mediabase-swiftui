@@ -80,7 +80,13 @@ class Networking: NSObject {
         let media: [Media]? = try? await sendJsonRequest(method: .get, endpoint: endpoint, arguments: EmptyRequest())
         return media
     }
-    
+
+    func getAllTags() async -> [Tag]? {
+        let endpoint = "\(Networking.baseURL)/tags"
+        let media: [Tag]? = try? await sendJsonRequest(method: .get, endpoint: endpoint, arguments: EmptyRequest())
+        return media
+    }
+
 }
 
 extension Networking : URLSessionDelegate {
