@@ -15,19 +15,23 @@ struct MediaGridCell: View {
         NavigationLink {
             MediaDetail(media: media)
         } label: {
-            ZStack(alignment: .bottomTrailing) {
-                Image("Cat1")
-                    .resizable()
-                    .aspectRatio(1, contentMode: .fill)
-                    .scaledToFit()
-                if media.type == "video" {
-                    Image("play")
-                        .resizable()
-                        .renderingMode(.template)
-                        .foregroundStyle(.white)
-                        .frame(width: 35, height: 35)
-                        .aspectRatio(1, contentMode: .fill)
-                        .padding(5)
+            AsyncImage(url: Networking().getMediaPreviewUrl(media: media)) { phase in
+                if let image = phase.image {
+                    ZStack(alignment: .bottomTrailing) {
+                        image
+                            .resizable()
+                            .aspectRatio(1, contentMode: .fill)
+                            .scaledToFit()
+                        if media.type == "video" {
+                            Image("play")
+                                .resizable()
+                                .renderingMode(.template)
+                                .foregroundStyle(.white)
+                                .frame(width: 35, height: 35)
+                                .aspectRatio(1, contentMode: .fill)
+                                .padding(5)
+                        }
+                    }
                 }
             }
         }

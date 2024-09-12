@@ -10,6 +10,7 @@
 		83025D842C83CD78001065DC /* TagNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83025D832C83CD78001065DC /* TagNavigation.swift */; };
 		8374C84F2C939E7100B9B22C /* TagListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8374C84E2C939E7100B9B22C /* TagListItem.swift */; };
 		8374C8512C939F6500B9B22C /* TagResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8374C8502C939F6500B9B22C /* TagResults.swift */; };
+		8374C8572C93AF5600B9B22C /* Cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8374C8562C93AF5600B9B22C /* Cat.jpg */; };
 		8377B37F2C81014800B733BA /* mediabaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377B37E2C81014800B733BA /* mediabaseApp.swift */; };
 		8377B3812C81014800B733BA /* MediaGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377B3802C81014800B733BA /* MediaGrid.swift */; };
 		8377B3832C81014900B733BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8377B3822C81014900B733BA /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 		83025D832C83CD78001065DC /* TagNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagNavigation.swift; sourceTree = "<group>"; };
 		8374C84E2C939E7100B9B22C /* TagListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListItem.swift; sourceTree = "<group>"; };
 		8374C8502C939F6500B9B22C /* TagResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagResults.swift; sourceTree = "<group>"; };
+		8374C8562C93AF5600B9B22C /* Cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cat.jpg; sourceTree = "<group>"; };
 		8377B37B2C81014800B733BA /* mediabase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mediabase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8377B37E2C81014800B733BA /* mediabaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mediabaseApp.swift; sourceTree = "<group>"; };
 		8377B3802C81014800B733BA /* MediaGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaGrid.swift; sourceTree = "<group>"; };
@@ -76,6 +78,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8374C8522C93AE8000B9B22C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8374C8532C93AE8D00B9B22C /* Mocks */,
+				838C81042C8A684000F1C1F9 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8374C8532C93AE8D00B9B22C /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				8374C8562C93AF5600B9B22C /* Cat.jpg */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		8377B3722C81014800B733BA = {
 			isa = PBXGroup;
 			children = (
@@ -102,7 +121,7 @@
 				8377B3B42C8282A800B733BA /* Media */,
 				8377B3B52C8282BB00B733BA /* Tags */,
 				8377B3AC2C827D6100B733BA /* MediaRoot.swift */,
-				838C81042C8A684000F1C1F9 /* Fonts */,
+				8374C8522C93AE8000B9B22C /* Resources */,
 				8377B37E2C81014800B733BA /* mediabaseApp.swift */,
 				838C810A2C8A70D000F1C1F9 /* CREDITS.md */,
 				8377B3822C81014900B733BA /* Assets.xcassets */,
@@ -247,6 +266,7 @@
 			files = (
 				8377B3862C81014900B733BA /* Preview Assets.xcassets in Resources */,
 				8377B3832C81014900B733BA /* Assets.xcassets in Resources */,
+				8374C8572C93AF5600B9B22C /* Cat.jpg in Resources */,
 				838C81072C8A698E00F1C1F9 /* NIKEA.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
