@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		83025D842C83CD78001065DC /* TagNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83025D832C83CD78001065DC /* TagNavigation.swift */; };
+		8374C84F2C939E7100B9B22C /* TagListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8374C84E2C939E7100B9B22C /* TagListItem.swift */; };
+		8374C8512C939F6500B9B22C /* TagResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8374C8502C939F6500B9B22C /* TagResults.swift */; };
 		8377B37F2C81014800B733BA /* mediabaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377B37E2C81014800B733BA /* mediabaseApp.swift */; };
 		8377B3812C81014800B733BA /* MediaGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377B3802C81014800B733BA /* MediaGrid.swift */; };
 		8377B3832C81014900B733BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8377B3822C81014900B733BA /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		83025D832C83CD78001065DC /* TagNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagNavigation.swift; sourceTree = "<group>"; };
+		8374C84E2C939E7100B9B22C /* TagListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListItem.swift; sourceTree = "<group>"; };
+		8374C8502C939F6500B9B22C /* TagResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagResults.swift; sourceTree = "<group>"; };
 		8377B37B2C81014800B733BA /* mediabase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mediabase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8377B37E2C81014800B733BA /* mediabaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mediabaseApp.swift; sourceTree = "<group>"; };
 		8377B3802C81014800B733BA /* MediaGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaGrid.swift; sourceTree = "<group>"; };
@@ -165,6 +169,8 @@
 			children = (
 				83025D832C83CD78001065DC /* TagNavigation.swift */,
 				8377B3B02C827FD100B733BA /* TagList.swift */,
+				8374C8502C939F6500B9B22C /* TagResults.swift */,
+				8374C84E2C939E7100B9B22C /* TagListItem.swift */,
 				8377B3B22C8281DE00B733BA /* EmptyTagsList.swift */,
 			);
 			path = Tags;
@@ -260,7 +266,9 @@
 				8377B3812C81014800B733BA /* MediaGrid.swift in Sources */,
 				838C81122C90FC3000F1C1F9 /* Storage.swift in Sources */,
 				83025D842C83CD78001065DC /* TagNavigation.swift in Sources */,
+				8374C84F2C939E7100B9B22C /* TagListItem.swift in Sources */,
 				838C810E2C8A7E9A00F1C1F9 /* Color.swift in Sources */,
+				8374C8512C939F6500B9B22C /* TagResults.swift in Sources */,
 				838C81102C90FBAC00F1C1F9 /* DataStorage.swift in Sources */,
 				8377B3AB2C8271CA00B733BA /* MockStorage.swift in Sources */,
 				8377B3B32C8281DE00B733BA /* EmptyTagsList.swift in Sources */,

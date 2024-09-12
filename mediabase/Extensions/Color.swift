@@ -15,6 +15,7 @@ extension Color {
         case listItemBackground = "ListItemBackground"
         case listItemForeground = "ListItemForeground"
         case emptyViewText = "EmptyViewText"
+        case viewBackground = "ViewBackground"
     }
     
     static func app(_ color: AppColor) -> Color {

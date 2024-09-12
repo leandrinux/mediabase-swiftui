@@ -16,19 +16,15 @@ struct TagList: View {
             if tags.count > 0 {
                 List {
                     ForEach(tags) { tag in
-                        HStack {
-                            Text(tag.name)
-                                .foregroundStyle(Color.app(.listItemForeground))
-                                .font(.secondary(.normal))
-                                .padding(.leading, 3.0)
-                            Spacer()
-                            Text("\(tag.count)")
-                                .foregroundStyle(Color.app(.listItemForeground))
-                                .font(.secondary(.normal))
+                        NavigationLink {
+                            TagResults(tag: tag)
+                        } label: {
+                            TagListItem(tag: tag)
                         }
-                        .frame(height: 40.0)
+                        .buttonStyle(PlainButtonStyle())
                         .listRowSeparatorTint(Color.app(.listItemForeground))
                         .listRowBackground(Color.app(.listItemBackground))
+
                     }
                 }
                 .scrollContentBackground(.hidden)
@@ -39,9 +35,7 @@ struct TagList: View {
         }.task {
             self.tags = await Storage.shared.getTags()
         }
-        
     }
-    
 }
 
 #Preview("With Tags") {
