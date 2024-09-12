@@ -10,9 +10,13 @@ import SwiftUI
 struct TagResults: View {
     
     var tag: Tag
-    
+    @State var media: [Media]?
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        MediaGrid(media: media)
+            .task {
+                self.media = await Networking().getMedia(tag: tag)
+            }
     }
 }
 

@@ -34,7 +34,6 @@ enum NetworkingError: Error {
 
 class Networking: NSObject {
     
-    static let shared = Networking()
     static let baseURL = "http://leandrim1.local:3000"
 
     fileprivate func sendJsonRequest<T:Codable, U:Codable>(method: HTTPMethod, endpoint: String, arguments: T) async throws -> U? {
@@ -75,20 +74,33 @@ class Networking: NSObject {
         }
     }
     
-    func getAllMedia() async -> [Media]? {
-        let endpoint = "\(Networking.baseURL)/media"
-        let media: [Media]? = try? await sendJsonRequest(method: .get, endpoint: endpoint, arguments: EmptyRequest())
-        return media
-    }
-
-    func getAllTags() async -> [Tag]? {
-        let endpoint = "\(Networking.baseURL)/tags"
-        let media: [Tag]? = try? await sendJsonRequest(method: .get, endpoint: endpoint, arguments: EmptyRequest())
-        return media
-    }
-
 }
 
 extension Networking : URLSessionDelegate {
+    
+}
+
+extension Networking: DataStorage {
+    
+    func getMedia() async -> [Media] {
+        debugPrint("Get all media")
+        let endpoint = "\(Networking.baseURL)/media"
+        let media: [Media]? = try? await sendJsonRequest(method: .get, endpoint: endpoint, arguments: EmptyRequest())
+        return media ?? [Media]()
+    }
+    
+    func getMedia(tag: Tag) async -> [Media] {
+        debugPrint("Get media for tag \(tag.name)")
+        let endpoint = "\(Networking.baseURL)/media?tags=\(tag.name)"
+        let media: [Media]? = try? await sendJsonRequest(method: .get, endpoint: endpoint, arguments: EmptyRequest())
+        return media ?? [Media]()
+    }
+
+    func getTags() async -> [Tag] {
+        debugPrint("Get all tags")
+        let endpoint = "\(Networking.baseURL)/tags"
+        let media: [Tag]? = try? await sendJsonRequest(method: .get, endpoint: endpoint, arguments: EmptyRequest())
+        return media ?? [Tag]()
+    }
     
 }

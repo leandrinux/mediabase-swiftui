@@ -24,7 +24,6 @@ struct TagList: View {
                         .buttonStyle(PlainButtonStyle())
                         .listRowSeparatorTint(Color.app(.listItemForeground))
                         .listRowBackground(Color.app(.listItemBackground))
-
                     }
                 }
                 .scrollContentBackground(.hidden)
@@ -33,7 +32,7 @@ struct TagList: View {
                 EmptyTagsList()
             }
         }.task {
-            self.tags = await Storage.shared.getTags()
+            self.tags = await Networking().getTags()
         }
     }
 }

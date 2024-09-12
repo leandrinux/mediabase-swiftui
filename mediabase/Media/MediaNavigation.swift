@@ -9,9 +9,14 @@ import SwiftUI
 
 struct MediaNavigation: View {
     
+    @State private var media: [Media]?
+    
     var body: some View {
         NavigationStack {
-            MediaGrid()
+            MediaGrid(media: media)
+                .task {
+                    self.media = await Networking().getMedia()
+                }
                 .toolbarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .principal) {

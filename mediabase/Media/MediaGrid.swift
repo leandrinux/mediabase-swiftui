@@ -10,7 +10,7 @@ import QGrid
 
 struct MediaGrid: View {
     
-    @State var media: [Media]?
+    var media: [Media]?
     
     var body: some View {
         ZStack {
@@ -38,10 +38,6 @@ struct MediaGrid: View {
                     .ignoresSafeArea(.all)
             }
             Gradients()
-        }.task {
-            if media == nil {
-                media = await Storage.shared.getMedia()
-            }
         }
     }
 }

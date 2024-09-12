@@ -31,7 +31,6 @@
 		838C81092C8A69CE00F1C1F9 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838C81082C8A69CE00F1C1F9 /* Font.swift */; };
 		838C810E2C8A7E9A00F1C1F9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838C810D2C8A7E9A00F1C1F9 /* Color.swift */; };
 		838C81102C90FBAC00F1C1F9 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838C810F2C90FBAC00F1C1F9 /* DataStorage.swift */; };
-		838C81122C90FC3000F1C1F9 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838C81112C90FC3000F1C1F9 /* Storage.swift */; };
 		838C81142C912F6A00F1C1F9 /* Gradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838C81132C912F6A00F1C1F9 /* Gradients.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +61,6 @@
 		838C810A2C8A70D000F1C1F9 /* CREDITS.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CREDITS.md; sourceTree = "<group>"; };
 		838C810D2C8A7E9A00F1C1F9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		838C810F2C90FBAC00F1C1F9 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
-		838C81112C90FC3000F1C1F9 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		838C81132C912F6A00F1C1F9 /* Gradients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradients.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,7 +144,6 @@
 				8377B3A02C810E3E00B733BA /* Networking.swift */,
 				838C810F2C90FBAC00F1C1F9 /* DataStorage.swift */,
 				8377B3AA2C8271CA00B733BA /* MockStorage.swift */,
-				838C81112C90FC3000F1C1F9 /* Storage.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -264,7 +261,6 @@
 				8377B3AF2C827F6500B733BA /* Tag.swift in Sources */,
 				8377B3B12C827FD100B733BA /* TagList.swift in Sources */,
 				8377B3812C81014800B733BA /* MediaGrid.swift in Sources */,
-				838C81122C90FC3000F1C1F9 /* Storage.swift in Sources */,
 				83025D842C83CD78001065DC /* TagNavigation.swift in Sources */,
 				8374C84F2C939E7100B9B22C /* TagListItem.swift in Sources */,
 				838C810E2C8A7E9A00F1C1F9 /* Color.swift in Sources */,
