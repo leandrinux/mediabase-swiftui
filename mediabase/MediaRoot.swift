@@ -20,6 +20,10 @@ struct MediaRoot: View {
             .font: UIFont.secondary(.normal)
         ]
         
+        let barColor = UIColor.black
+        UITabBar.appearance().barTintColor = barColor
+        UINavigationBar.appearance().barTintColor = barColor
+        
     }
     
     var body: some View {
