@@ -12,18 +12,20 @@ struct MediaDetail: View {
     @State var media: Media
     
     var body: some View {
-        AsyncImage(
-            url: Networking().getMediaFileUrl(media: media)
-        ) { phase in
-            if let image = phase.image {
-                ZoomableScrollView {
-                    image
-                        .resizable()
-                        .aspectRatio(1, contentMode: .fill)
-                        .scaledToFit()
-                        .clipped()
+        ZStack {
+            Color.green
+            AsyncImage(
+                url: Networking().getMediaFileUrl(media: media)
+            ) { phase in
+                if let image = phase.image {
+                    ZoomableScrollView {
+                        image
+                            .scaledToFit()
+                    }
                 }
             }
+            .background(Color.black)
+            .ignoresSafeArea()
         }
         .toolbar(.hidden, for: .tabBar)
         .navigationBarBackButtonHidden(true)
