@@ -11,6 +11,10 @@ class MockStorage: DataStorage {
     
     static let shared = MockStorage()
     
+    func getMediaFileUrl(media: Media) -> URL? {
+        return Bundle.main.url(forResource: "Cat", withExtension: "jpg")
+    }
+    
     func getMediaPreviewUrl(media: Media) -> URL? {
         return Bundle.main.url(forResource: "Cat", withExtension: "jpg")
     }

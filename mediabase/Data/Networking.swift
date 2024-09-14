@@ -82,6 +82,11 @@ extension Networking : URLSessionDelegate {
 
 extension Networking: DataStorage {
     
+    func getMediaFileUrl(media: Media) -> URL? {
+        let url = URL(string: "\(Networking.baseURL)/media/\(media.id)/file")
+        return url
+    }
+
     func getMediaPreviewUrl(media: Media) -> URL? {
         let url = URL(string: "\(Networking.baseURL)/media/\(media.id)/preview")
         return url

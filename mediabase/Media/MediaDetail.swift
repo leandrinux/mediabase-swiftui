@@ -8,9 +8,19 @@
 import SwiftUI
 
 struct MediaDetail: View {
-    var media: Media
+    
+    @State var media: Media
+    
     var body: some View {
-        Text("Image")
+        AsyncImage(url: Networking().getMediaFileUrl(media: media)) { phase in
+            if let image = phase.image {
+                image
+                    .resizable()
+                    .aspectRatio(1, contentMode: .fill)
+                    .scaledToFit()
+                    .clipped()
+            }
+        }
     }
 }
 

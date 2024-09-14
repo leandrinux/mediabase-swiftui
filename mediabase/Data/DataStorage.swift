@@ -9,6 +9,8 @@ import Foundation
 
 protocol DataStorage {
     
+    func getMediaFileUrl(media: Media) -> URL?
+
     func getMediaPreviewUrl(media: Media) -> URL?
     
     func getMedia() async -> [Media]
