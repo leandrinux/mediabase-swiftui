@@ -25,6 +25,13 @@ struct MediaDetail: View {
                 }
             }
         }
+        .toolbar(.hidden, for: .tabBar)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                BackButton()
+            }
+        }
     }
 }
 

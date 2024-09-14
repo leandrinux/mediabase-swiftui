@@ -13,3 +13,6 @@
 * Plus icon by Fuzzee https://www.flaticon.com/authors/fuzzee
 * Back icon by Freepic https://www.flaticon.com/authors/freepik
 
+## Code
+
+* ZoomableScrollView by Avario https://stackoverflow.com/questions/58341820/isnt-there-an-easy-way-to-pinch-to-zoom-in-an-image-in-swiftui
