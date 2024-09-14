@@ -12,25 +12,30 @@ struct MediaGrid: View {
     
     var media: [Media]?
     
+    private let columns = [
+        GridItem(.adaptive(minimum: 180)),
+        GridItem(.adaptive(minimum: 180)),
+        GridItem(.adaptive(minimum: 180))
+    ]
+    
     var body: some View {
         ZStack {
             if let media = media {
                 if media.count == 0 {
                     EmptyMediaGrid()
                 } else {
-                    ZStack(alignment: .top) {
-                        QGrid(
-                            media,
-                            columns: 3,
-                            vSpacing: 1,
-                            hSpacing: 1,
-                            vPadding: 1,
-                            hPadding: 1
-                        ) {
-                            MediaGridCell(media: $0)
+                    GeometryReader { geometry in
+                        ScrollView {
+                            LazyVGrid(columns: columns) {
+                                let side = (geometry.size.width) / 3
+                                ForEach(media) { media in
+                                    MediaGridCell(media: media)
+                                        .frame(width: side, height: side)
+                                }
+                            }.lineSpacing(0)
                         }
-                        .background(Color.app(.viewBackground))
                     }
+                    .background(Color.app(.viewBackground))
                 }
             } else {
                 Rectangle()

@@ -10,7 +10,7 @@ import SwiftUI
 struct TagList: View {
     
     @State var tags = [Tag]()
-    
+        
     var body: some View {
         ZStack {
             if tags.count > 0 {

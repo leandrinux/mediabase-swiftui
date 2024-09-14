@@ -6,8 +6,10 @@
   
 ## Icons
 
-* Gallery icon by Kiranshastry (https://www.flaticon.com/authors/kiranshastry)
-* Play icon by Bingge Liu (https://thenounproject.com/creator/binggeliu/)
-* Tags icon by Pixel Perfect (https://www.flaticon.com/authors/pixel-perfect)
-* Search icon by Smashicons (https://www.flaticon.com/authors/smashicons)
+* Gallery icon by Kiranshastry https://www.flaticon.com/authors/kiranshastry
+* Play icon by Bingge Liu https://thenounproject.com/creator/binggeliu/
+* Tags icon by Pixel Perfect https://www.flaticon.com/authors/pixel-perfect
+* Search icon by Smashicons https://www.flaticon.com/authors/smashicons
 * Plus icon by Fuzzee https://www.flaticon.com/authors/fuzzee
+* Back icon by Freepic https://www.flaticon.com/authors/freepik
+

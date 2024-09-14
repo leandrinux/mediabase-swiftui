@@ -22,6 +22,7 @@ struct MediaGridCell: View {
                             .resizable()
                             .aspectRatio(1, contentMode: .fill)
                             .scaledToFit()
+                            .clipped()
                         if media.type == "video" {
                             Image("play")
                                 .resizable()

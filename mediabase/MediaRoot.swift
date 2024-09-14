@@ -11,6 +11,17 @@ struct MediaRoot: View {
     var media: [Media]?
     var tags: [Tag]?
     
+    init(media: [Media]? = nil, tags: [Tag]? = nil) {
+        self.media = media
+        self.tags = tags
+        
+        UINavigationBar.appearance().titleTextAttributes = [
+            .foregroundColor: UIColor(Color.app(.main)),
+            .font: UIFont.secondary(.normal)
+        ]
+        
+    }
+    
     var body: some View {
         TabView {
             MediaNavigation()

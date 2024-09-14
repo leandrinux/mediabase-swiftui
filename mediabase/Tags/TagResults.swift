@@ -11,11 +11,19 @@ struct TagResults: View {
     
     var tag: Tag
     @State var media: [Media]?
-
+    
     var body: some View {
         MediaGrid(media: media)
             .task {
                 self.media = await Networking().getMedia(tag: tag)
+            }
+            .navigationBarBackButtonHidden(true)
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle(tag.name)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    BackButton()
+                }
             }
     }
 }

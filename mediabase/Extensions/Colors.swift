@@ -1,5 +1,5 @@
 //
-//  Color.swift
+//  Colors.swift
 //  mediabase
 //
 //  Created by Leandro on 05/09/2024.
