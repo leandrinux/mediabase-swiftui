@@ -12,13 +12,17 @@ struct MediaDetail: View {
     @State var media: Media
     
     var body: some View {
-        AsyncImage(url: Networking().getMediaFileUrl(media: media)) { phase in
+        AsyncImage(
+            url: Networking().getMediaFileUrl(media: media)
+        ) { phase in
             if let image = phase.image {
-                image
-                    .resizable()
-                    .aspectRatio(1, contentMode: .fill)
-                    .scaledToFit()
-                    .clipped()
+                ZoomableScrollView {
+                    image
+                        .resizable()
+                        .aspectRatio(1, contentMode: .fill)
+                        .scaledToFit()
+                        .clipped()
+                }
             }
         }
     }

@@ -12,6 +12,7 @@
 		8374C8512C939F6500B9B22C /* TagResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8374C8502C939F6500B9B22C /* TagResults.swift */; };
 		8374C8572C93AF5600B9B22C /* Cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8374C8562C93AF5600B9B22C /* Cat.jpg */; };
 		8374C85A2C95F59500B9B22C /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8374C8592C95F59500B9B22C /* BackButton.swift */; };
+		8374C85C2C95FA0B00B9B22C /* ZoomableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8374C85B2C95FA0B00B9B22C /* ZoomableScrollView.swift */; };
 		8377B37F2C81014800B733BA /* mediabaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377B37E2C81014800B733BA /* mediabaseApp.swift */; };
 		8377B3812C81014800B733BA /* MediaGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377B3802C81014800B733BA /* MediaGrid.swift */; };
 		8377B3832C81014900B733BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8377B3822C81014900B733BA /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		8374C8502C939F6500B9B22C /* TagResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagResults.swift; sourceTree = "<group>"; };
 		8374C8562C93AF5600B9B22C /* Cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cat.jpg; sourceTree = "<group>"; };
 		8374C8592C95F59500B9B22C /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		8374C85B2C95FA0B00B9B22C /* ZoomableScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomableScrollView.swift; sourceTree = "<group>"; };
 		8377B37B2C81014800B733BA /* mediabase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mediabase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8377B37E2C81014800B733BA /* mediabaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mediabaseApp.swift; sourceTree = "<group>"; };
 		8377B3802C81014800B733BA /* MediaGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaGrid.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		8374C8582C95F58C00B9B22C /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				8374C85B2C95FA0B00B9B22C /* ZoomableScrollView.swift */,
 				8374C8592C95F59500B9B22C /* BackButton.swift */,
 			);
 			path = Other;
@@ -303,6 +306,7 @@
 				8377B3AD2C827D6100B733BA /* MediaRoot.swift in Sources */,
 				8377B3A72C826CD000B733BA /* EmptyMediaGrid.swift in Sources */,
 				838C81142C912F6A00F1C1F9 /* Gradients.swift in Sources */,
+				8374C85C2C95FA0B00B9B22C /* ZoomableScrollView.swift in Sources */,
 				8377B3972C81057900B733BA /* UIImage.swift in Sources */,
 				8377B39C2C810AED00B733BA /* MediaNavigation.swift in Sources */,
 				8377B3A12C810E3E00B733BA /* Networking.swift in Sources */,
