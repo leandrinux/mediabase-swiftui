@@ -36,6 +36,10 @@ struct MediaRoot: View {
                 .tabItem {
                     Label("Tags", systemImage: "star")
                 }
+            QRList()
+                .tabItem {
+                    Label("QRs", systemImage: "star")
+                }
         }
     }
 }

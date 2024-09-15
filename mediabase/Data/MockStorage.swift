@@ -15,7 +15,7 @@ class MockStorage: DataStorage {
         return Bundle.main.url(forResource: "Cat", withExtension: "jpg")
     }
     
-    func getMediaPreviewUrl(media: Media) -> URL? {
+    func getMediaPreviewUrl(id: String) -> URL? {
         return Bundle.main.url(forResource: "Cat", withExtension: "jpg")
     }
     
@@ -30,6 +30,10 @@ class MockStorage: DataStorage {
             Media(id: UUID().uuidString),
             Media(id: UUID().uuidString),
         ]
+    }
+    
+    func getMediaWithQRs() async -> [QRMedia] {
+        return []
     }
     
     func getTags() async -> [Tag] {

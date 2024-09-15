@@ -15,7 +15,7 @@ struct MediaGridCell: View {
         NavigationLink {
             MediaDetail(media: media)
         } label: {
-            AsyncImage(url: Networking().getMediaPreviewUrl(media: media)) { phase in
+            AsyncImage(url: Networking().getMediaPreviewUrl(id: media.id)) { phase in
                 if let image = phase.image {
                     ZStack(alignment: .bottomTrailing) {
                         image

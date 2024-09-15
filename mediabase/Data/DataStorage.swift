@@ -11,9 +11,11 @@ protocol DataStorage {
     
     func getMediaFileUrl(media: Media) -> URL?
 
-    func getMediaPreviewUrl(media: Media) -> URL?
+    func getMediaPreviewUrl(id: String) -> URL?
     
     func getMedia() async -> [Media]
+
+    func getMediaWithQRs() async -> [QRMedia]
     
     func getTags() async -> [Tag]
     

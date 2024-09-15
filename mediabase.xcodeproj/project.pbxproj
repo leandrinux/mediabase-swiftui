@@ -34,6 +34,9 @@
 		838C810E2C8A7E9A00F1C1F9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838C810D2C8A7E9A00F1C1F9 /* Colors.swift */; };
 		838C81102C90FBAC00F1C1F9 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838C810F2C90FBAC00F1C1F9 /* DataStorage.swift */; };
 		838C81142C912F6A00F1C1F9 /* Gradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838C81132C912F6A00F1C1F9 /* Gradients.swift */; };
+		839A325D2C971C330085D6B1 /* QRMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A325C2C971C330085D6B1 /* QRMedia.swift */; };
+		839A32602C971DF20085D6B1 /* QRList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A325F2C971DF20085D6B1 /* QRList.swift */; };
+		839A32622C97203E0085D6B1 /* QRListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A32612C97203E0085D6B1 /* QRListItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +70,9 @@
 		838C810D2C8A7E9A00F1C1F9 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		838C810F2C90FBAC00F1C1F9 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 		838C81132C912F6A00F1C1F9 /* Gradients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradients.swift; sourceTree = "<group>"; };
+		839A325C2C971C330085D6B1 /* QRMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRMedia.swift; sourceTree = "<group>"; };
+		839A325F2C971DF20085D6B1 /* QRList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRList.swift; sourceTree = "<group>"; };
+		839A32612C97203E0085D6B1 /* QRListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,9 +137,10 @@
 				8377B3952C81056C00B733BA /* Extensions */,
 				8377B3B42C8282A800B733BA /* Media */,
 				8377B3B52C8282BB00B733BA /* Tags */,
-				8377B3AC2C827D6100B733BA /* MediaRoot.swift */,
+				839A325E2C971DCC0085D6B1 /* QR */,
 				8374C8582C95F58C00B9B22C /* Other */,
 				8374C8522C93AE8000B9B22C /* Resources */,
+				8377B3AC2C827D6100B733BA /* MediaRoot.swift */,
 				8377B37E2C81014800B733BA /* mediabaseApp.swift */,
 				838C810A2C8A70D000F1C1F9 /* CREDITS.md */,
 				8377B3822C81014900B733BA /* Assets.xcassets */,
@@ -165,6 +172,7 @@
 			children = (
 				8377B3912C8104F000B733BA /* Media.swift */,
 				8377B3AE2C827F6500B733BA /* Tag.swift */,
+				839A325C2C971C330085D6B1 /* QRMedia.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -210,6 +218,15 @@
 				838C81052C8A685300F1C1F9 /* NIKEA.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		839A325E2C971DCC0085D6B1 /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				839A325F2C971DF20085D6B1 /* QRList.swift */,
+				839A32612C97203E0085D6B1 /* QRListItem.swift */,
+			);
+			path = QR;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,9 +308,11 @@
 				8377B3AF2C827F6500B733BA /* Tag.swift in Sources */,
 				8377B3B12C827FD100B733BA /* TagList.swift in Sources */,
 				8374C85A2C95F59500B9B22C /* BackButton.swift in Sources */,
+				839A325D2C971C330085D6B1 /* QRMedia.swift in Sources */,
 				8377B3812C81014800B733BA /* MediaGrid.swift in Sources */,
 				83025D842C83CD78001065DC /* TagNavigation.swift in Sources */,
 				8374C84F2C939E7100B9B22C /* TagListItem.swift in Sources */,
+				839A32622C97203E0085D6B1 /* QRListItem.swift in Sources */,
 				838C810E2C8A7E9A00F1C1F9 /* Colors.swift in Sources */,
 				8374C8512C939F6500B9B22C /* TagResults.swift in Sources */,
 				838C81102C90FBAC00F1C1F9 /* DataStorage.swift in Sources */,
@@ -307,6 +326,7 @@
 				8377B39C2C810AED00B733BA /* MediaNavigation.swift in Sources */,
 				8377B3A12C810E3E00B733BA /* Networking.swift in Sources */,
 				8377B3A52C82658E00B733BA /* MediaGridCell.swift in Sources */,
+				839A32602C971DF20085D6B1 /* QRList.swift in Sources */,
 				838C81092C8A69CE00F1C1F9 /* Fonts.swift in Sources */,
 				8377B39E2C810B9500B733BA /* MediaDetail.swift in Sources */,
 				8377B37F2C81014800B733BA /* mediabaseApp.swift in Sources */,

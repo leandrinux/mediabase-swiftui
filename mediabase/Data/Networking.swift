@@ -87,8 +87,8 @@ extension Networking: DataStorage {
         return url
     }
 
-    func getMediaPreviewUrl(media: Media) -> URL? {
-        let url = URL(string: "\(Networking.baseURL)/media/\(media.id)/preview")
+    func getMediaPreviewUrl(id: String) -> URL? {
+        let url = URL(string: "\(Networking.baseURL)/media/\(id)/preview")
         return url
     }
 
@@ -98,7 +98,14 @@ extension Networking: DataStorage {
         let media: [Media]? = try? await sendJsonRequest(method: .get, endpoint: endpoint, arguments: EmptyRequest())
         return media ?? [Media]()
     }
-    
+
+    func getMediaWithQRs() async -> [QRMedia] {
+        debugPrint("Get all media with QR codes")
+        let endpoint = "\(Networking.baseURL)/qr/media"
+        let media: [QRMedia]? = try? await sendJsonRequest(method: .get, endpoint: endpoint, arguments: EmptyRequest())
+        return media ?? [QRMedia]()
+    }
+
     func getMedia(tag: Tag) async -> [Media] {
         debugPrint("Get media for tag \(tag.name)")
         let endpoint = "\(Networking.baseURL)/media?tags=\(tag.name)"
