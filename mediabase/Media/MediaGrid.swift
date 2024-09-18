@@ -11,12 +11,10 @@ struct MediaGrid: View {
     
     var dataStorage: DataStorage
     var media: [Media]?
-    
-    private let columns = Array(
-        repeating: GridItem(.flexible(), spacing: 2),
-        count: 3
-    )
-    
+        
+    private let columns = [
+        GridItem(.adaptive(minimum: 120), spacing: 2)
+    ]
     
     var body: some View {
         ZStack {
@@ -31,7 +29,7 @@ struct MediaGrid: View {
                             }
                         }
                     }
-                    .background(Color.app(.viewBackground))
+                    .background(Color.app(.viewBackground))                    
                 }
             } else {
                 Color.app(.viewBackground)
