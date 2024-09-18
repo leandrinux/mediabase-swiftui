@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct QRList: View {
+    
+    var dataStorage: DataStorage
     @State var qrMedia = [QRMedia]()
     
     var body: some View {
         List {
             ForEach(qrMedia) { qrMedia in
-                QRListItem(qrMedia: qrMedia)
+                QRListItem(dataStorage: dataStorage, qrMedia: qrMedia)
                 .buttonStyle(PlainButtonStyle())
                 .listRowSeparatorTint(Color.app(.listItemForeground))
                 .listRowBackground(Color.app(.listItemBackground))
@@ -22,11 +24,13 @@ struct QRList: View {
         .scrollContentBackground(.hidden)
         .background(Color.app(.listBackground))
         .task {
-            self.qrMedia = await Networking().getMediaWithQRs()
+            self.qrMedia = await dataStorage.getMediaWithQRs()
         }
     }
 }
 
 #Preview {
-    QRList()
+    QRList(
+        dataStorage: MockStorage()
+    )
 }

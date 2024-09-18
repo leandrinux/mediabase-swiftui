@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct TagNavigation: View {
+    
+    var dataStorage: DataStorage
 
     var body: some View {
         NavigationStack {
-            TagList()
+            TagList(dataStorage: dataStorage)
                 .toolbarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .principal) {
@@ -39,7 +41,7 @@ struct TagNavigation: View {
     struct AsyncTestView: View {
         @State var tags = [Tag]()
         var body: some View {
-            TagNavigation()
+            TagNavigation(dataStorage: MockStorage())
                 .task {
                     tags = await MockStorage.shared.getTags()
                 }

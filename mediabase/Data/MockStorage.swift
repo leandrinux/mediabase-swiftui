@@ -32,6 +32,12 @@ class MockStorage: DataStorage {
         ]
     }
     
+    func getMedia(tag: Tag) async -> [Media] {
+        return [
+            Media(id: UUID().uuidString)
+        ]
+    }
+    
     func getMediaWithQRs() async -> [QRMedia] {
         return []
     }

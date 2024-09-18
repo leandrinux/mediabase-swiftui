@@ -9,13 +9,15 @@ import SwiftUI
 
 struct MediaGridCell: View {
     
+    var dataStorage: DataStorage
+    
     var media: Media
     
     var body: some View {
         NavigationLink {
-            MediaDetail(media: media)
+            MediaDetail(dataStorage: dataStorage, media: media)
         } label: {
-            AsyncImage(url: Networking().getMediaPreviewUrl(id: media.id)) { phase in
+            AsyncImage(url: dataStorage.getMediaPreviewUrl(id: media.id)) { phase in
                 if let image = phase.image {
                     ZStack(alignment: .bottomTrailing) {
                         image
@@ -40,11 +42,15 @@ struct MediaGridCell: View {
 }
 
 #Preview("Image cell") {
-    let media2 = Media(id: UUID().uuidString, type: "image")
-    return MediaGridCell(media: media2)
+    MediaGridCell(
+        dataStorage: MockStorage(),
+        media: Media(id: UUID().uuidString, type: "image")
+    )
 }
 
 #Preview("Video cell") {
-    let media1 = Media(id: UUID().uuidString, type: "video")
-    return MediaGridCell(media: media1)
+    MediaGridCell(
+        dataStorage: MockStorage(),
+        media: Media(id: UUID().uuidString, type: "video")
+    )
 }

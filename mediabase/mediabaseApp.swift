@@ -11,7 +11,7 @@ import SwiftUI
 struct mediabaseApp: App {
     var body: some Scene {
         WindowGroup {
-            MediaRoot()
+            MediaRoot(dataStorage: Networking())
         }
     }
 }

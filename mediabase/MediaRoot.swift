@@ -8,13 +8,11 @@
 import SwiftUI
 
 struct MediaRoot: View {
+    var dataStorage: DataStorage
     var media: [Media]?
     var tags: [Tag]?
     
-    init(media: [Media]? = nil, tags: [Tag]? = nil) {
-        self.media = media
-        self.tags = tags
-        
+    func setAppearances() {
         UINavigationBar.appearance().titleTextAttributes = [
             .foregroundColor: UIColor(Color.app(.main)),
             .font: UIFont.secondary(.normal)
@@ -23,20 +21,26 @@ struct MediaRoot: View {
         let barColor = UIColor.black
         UITabBar.appearance().barTintColor = barColor
         UINavigationBar.appearance().barTintColor = barColor
-        
+    }
+     
+    init(dataStorage: DataStorage, media: [Media]? = nil, tags: [Tag]? = nil) {
+        self.dataStorage = dataStorage
+        self.media = media
+        self.tags = tags
+        setAppearances()
     }
     
     var body: some View {
         TabView {
-            MediaNavigation()
+            MediaNavigation(dataStorage: dataStorage)
                 .tabItem {
                     Label("Media", systemImage: "star")
                 }
-            TagNavigation()
+            TagNavigation(dataStorage: dataStorage)
                 .tabItem {
                     Label("Tags", systemImage: "star")
                 }
-            QRList()
+            QRList(dataStorage: dataStorage)
                 .tabItem {
                     Label("QRs", systemImage: "star")
                 }

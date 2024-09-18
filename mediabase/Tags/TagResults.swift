@@ -9,13 +9,15 @@ import SwiftUI
 
 struct TagResults: View {
     
+    var dataStorage: DataStorage
+    
     var tag: Tag
     @State var media: [Media]?
     
     var body: some View {
-        MediaGrid(media: media)
+        MediaGrid(dataStorage: dataStorage, media: media)
             .task {
-                self.media = await Networking().getMedia(tag: tag)
+                self.media = await dataStorage.getMedia(tag: tag)
             }
             .navigationBarBackButtonHidden(true)
             .navigationBarTitleDisplayMode(.inline)
@@ -29,6 +31,8 @@ struct TagResults: View {
 }
 
 #Preview {
-    let tag = Tag(id: 0, name: "February", count: 255)
-    return TagResults(tag: tag)
+    TagResults(
+        dataStorage: MockStorage(),
+        tag: Tag(id: 0, name: "February", count: 255)
+    )
 }

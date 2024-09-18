@@ -9,6 +9,8 @@ import SwiftUI
 
 struct TagList: View {
     
+    var dataStorage: DataStorage
+    
     @State var tags = [Tag]()
         
     var body: some View {
@@ -17,7 +19,7 @@ struct TagList: View {
                 List {
                     ForEach(tags) { tag in
                         NavigationLink {
-                            TagResults(tag: tag)
+                            TagResults(dataStorage: dataStorage, tag: tag)
                         } label: {
                             TagListItem(tag: tag)
                         }
@@ -32,7 +34,7 @@ struct TagList: View {
                 EmptyTagsList()
             }
         }.task {
-            self.tags = await Networking().getTags()
+            self.tags = await dataStorage.getTags()
         }
     }
 }
@@ -41,15 +43,18 @@ struct TagList: View {
     struct AsyncTestView: View {
         @State var passedValue = [Tag]()
         var body: some View {
-            TagList(tags: passedValue)
-                .task {
-                    passedValue = await MockStorage.shared.getTags()
-                }
+            TagList(
+                dataStorage: MockStorage(),
+                tags: passedValue
+            )
+            .task {
+                passedValue = await MockStorage.shared.getTags()
+            }
         }
     }
     return AsyncTestView()
 }
 
 #Preview("Empty") {
-    TagList()
+    TagList(dataStorage: MockStorage())
 }

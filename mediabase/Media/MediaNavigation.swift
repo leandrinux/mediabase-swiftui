@@ -9,13 +9,15 @@ import SwiftUI
 
 struct MediaNavigation: View {
     
+    var dataStorage: DataStorage
+    
     @State private var media: [Media]?
     
     var body: some View {
         NavigationStack {
-            MediaGrid(media: media)
+            MediaGrid(dataStorage: dataStorage, media: media)
                 .task {
-                    self.media = await Networking().getMedia()
+                    self.media = await dataStorage.getMedia()
                 }
                 .toolbarTitleDisplayMode(.inline)
                 .toolbar {
@@ -43,5 +45,5 @@ struct MediaNavigation: View {
 }
 
 #Preview("No photos") {
-    MediaNavigation()
+    MediaNavigation(dataStorage: MockStorage())
 }

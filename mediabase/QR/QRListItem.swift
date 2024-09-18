@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct QRListItem: View {
+    var dataStorage: DataStorage
+    
     let qrMedia: QRMedia
     
     var body: some View {
         HStack(alignment: .top) {
-            AsyncImage(url: Networking().getMediaPreviewUrl(id: qrMedia.id)) { phase in
+            AsyncImage(url: dataStorage.getMediaPreviewUrl(id: qrMedia.id)) { phase in
                 if let image = phase.image {
                     image
                         .resizable()
@@ -28,6 +30,8 @@ struct QRListItem: View {
 }
 
 #Preview {
-    let qrMedia = QRMedia(id: "0", value: "Hello")
-    return QRListItem(qrMedia: qrMedia)
+    QRListItem(
+        dataStorage: MockStorage(),
+        qrMedia: QRMedia(id: "0", value: "Hello")
+    )
 }

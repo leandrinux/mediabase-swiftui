@@ -6,10 +6,10 @@
 //
 
 import SwiftUI
-import QGrid
 
 struct MediaGrid: View {
     
+    var dataStorage: DataStorage
     var media: [Media]?
     
     private let columns = [
@@ -29,7 +29,7 @@ struct MediaGrid: View {
                             LazyVGrid(columns: columns) {
                                 let side = (geometry.size.width) / 3
                                 ForEach(media) { media in
-                                    MediaGridCell(media: media)
+                                    MediaGridCell(dataStorage: dataStorage, media: media)
                                         .frame(width: side, height: side)
                                 }
                             }.lineSpacing(0)
@@ -51,7 +51,7 @@ struct MediaGrid: View {
     struct AsyncTestView: View {
         @State var media = [Media]()
             var body: some View {
-                MediaGrid(media: media)
+                MediaGrid(dataStorage: MockStorage(), media: media)
                     .task {
                         media = await MockStorage.shared.getMedia()
                     }
@@ -61,5 +61,7 @@ struct MediaGrid: View {
 }
 
 #Preview("Empty") {
-    MediaGrid()
+    MediaGrid(
+        dataStorage: MockStorage()
+    )
 }

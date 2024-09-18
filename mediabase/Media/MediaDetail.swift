@@ -9,13 +9,15 @@ import SwiftUI
 
 struct MediaDetail: View {
     
+    var dataStorage: DataStorage
+    
     @State var media: Media
     
     var body: some View {
         ZStack {
             Color.green
             AsyncImage(
-                url: Networking().getMediaFileUrl(media: media)
+                url: dataStorage.getMediaFileUrl(media: media)
             ) { phase in
                 if let image = phase.image {
                     ZoomableScrollView {
@@ -38,5 +40,8 @@ struct MediaDetail: View {
 }
 
 #Preview {
-    MediaDetail(media: Media(id: UUID().uuidString))
+    MediaDetail(
+        dataStorage: MockStorage(),
+        media: Media(id: UUID().uuidString)
+    )
 }
