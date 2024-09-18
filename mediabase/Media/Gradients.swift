@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Gradients: View {
+    
     var body: some View {
         VStack {
             Rectangle()
@@ -21,6 +22,7 @@ struct Gradients: View {
         .edgesIgnoringSafeArea(.all)
         .opacity(0.8)
     }
+    
 }
 
 #Preview {

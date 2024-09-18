@@ -12,11 +12,11 @@ struct MediaGrid: View {
     var dataStorage: DataStorage
     var media: [Media]?
     
-    private let columns = [
-        GridItem(.adaptive(minimum: 180)),
-        GridItem(.adaptive(minimum: 180)),
-        GridItem(.adaptive(minimum: 180))
-    ]
+    private let columns = Array(
+        repeating: GridItem(.flexible(), spacing: 2),
+        count: 3
+    )
+    
     
     var body: some View {
         ZStack {
@@ -24,22 +24,17 @@ struct MediaGrid: View {
                 if media.count == 0 {
                     EmptyMediaGrid()
                 } else {
-                    GeometryReader { geometry in
-                        ScrollView {
-                            LazyVGrid(columns: columns) {
-                                let side = (geometry.size.width) / 3
-                                ForEach(media) { media in
-                                    MediaGridCell(dataStorage: dataStorage, media: media)
-                                        .frame(width: side, height: side)
-                                }
-                            }.lineSpacing(0)
+                    ScrollView {
+                        LazyVGrid(columns: columns, spacing: 2) {
+                            ForEach(media) { media in
+                                MediaGridCell(dataStorage: dataStorage, media: media)
+                            }
                         }
                     }
                     .background(Color.app(.viewBackground))
                 }
             } else {
-                Rectangle()
-                    .fill(Color.app(.viewBackground))
+                Color.app(.viewBackground)
                     .ignoresSafeArea(.all)
             }
             Gradients()

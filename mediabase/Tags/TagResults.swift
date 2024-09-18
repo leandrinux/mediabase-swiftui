@@ -9,10 +9,9 @@ import SwiftUI
 
 struct TagResults: View {
     
-    var dataStorage: DataStorage
-    
-    var tag: Tag
     @State var media: [Media]?
+    var dataStorage: DataStorage
+    var tag: Tag
     
     var body: some View {
         MediaGrid(dataStorage: dataStorage, media: media)

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct EmptyTagsList: View {
+    
     var body: some View {
         VStack {
             Image("tags")
@@ -22,6 +23,7 @@ struct EmptyTagsList: View {
                 .foregroundStyle(Color.app(.emptyViewText))
         }.padding()
     }
+    
 }
 
 #Preview {

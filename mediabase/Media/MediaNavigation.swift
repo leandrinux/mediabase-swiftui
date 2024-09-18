@@ -10,7 +10,6 @@ import SwiftUI
 struct MediaNavigation: View {
     
     var dataStorage: DataStorage
-    
     @State private var media: [Media]?
     
     var body: some View {

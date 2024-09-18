@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct EmptyMediaGrid: View {
+    
     var body: some View {
         VStack {
             Image("gallery")
@@ -21,9 +22,9 @@ struct EmptyMediaGrid: View {
                 .multilineTextAlignment(.center)
                 .foregroundStyle(Color("EmptyViewText"))
         }
-        .padding()
-            
+        .padding()        
     }
+    
 }
 
 #Preview {

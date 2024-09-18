@@ -10,7 +10,6 @@ import SwiftUI
 struct MediaDetail: View {
     
     var dataStorage: DataStorage
-    
     @State var media: Media
     
     var body: some View {
@@ -37,6 +36,7 @@ struct MediaDetail: View {
             }
         }
     }
+    
 }
 
 #Preview {

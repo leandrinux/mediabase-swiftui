@@ -10,6 +10,7 @@ import SwiftUI
 struct TagListItem: View {
     
     var tag: Tag
+    
     var body: some View {
         HStack {
             Text(tag.name)
